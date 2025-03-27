@@ -1,0 +1,205 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #111;
+  background-color: #fff;
+}
+
+header {
+  border-bottom: 1px solid #eee;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.auth-buttons button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  background: none;
+  cursor: pointer;
+}
+
+.auth-buttons .signup {
+  background-color: black;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons .primary,
+.hero-buttons .secondary {
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero-buttons .primary {
+  background-color: black;
+  color: white;
+}
+
+.hero-buttons .secondary {
+  background-color: #f4f4f4;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  width: 280px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.2rem;
+  background-color: #fafafa;
+}
+
+.feature h3 {
+  margin-top: 0;
+}
+
+.popular {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.popular .tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.popular .tags span {
+  background-color: #111;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.how-to {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #777;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  text-align: center;
+  max-width: 180px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 0 auto 1rem auto;
+}
+
+/* 공통 버튼 스타일 */
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px; /* 둥글게 만들기 */
+  transition: all 0.3s ease;
+}
+
+/* 상단 로그인/회원가입 버튼 */
+.auth-buttons .btn {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons .btn:hover {
+  background-color: #f0f0f0;
+}
+
+.auth-buttons .signup {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.auth-buttons .signup:hover {
+  background-color: #333;
+}
+
+/* 시작하기 / 서비스 소개 버튼 */
+.hero-buttons .primary,
+.hero-buttons .secondary {
+  border-radius: 10px; /* 각진 느낌 없애기 */
+}
+
+.hero-buttons .primary:hover {
+  background-color: #333;
+}
+
+.hero-buttons .secondary:hover {
+  background-color: #eaeaea;
+}
+

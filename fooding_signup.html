@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="fooding_signup.css" />
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h2>회원가입</h2>
+            <p class="subtitle">계정을 만들어 식재료 교환 및 나눔을 시작하세요</p>
+
+            <!-- 탭 -->
+            <div class="tab">
+                <button class="tab-btn active" data-type="personal">개인</button>
+                <button class="tab-btn" data-type="business">사업자(요식업)</button>
+            </div>
+
+            <!-- 개인 회원가입 폼 -->
+            <form id="personal-form" class="signup-form">
+                <label>이름</label>
+                <input type="text" placeholder="이름" />
+
+                <label>이메일</label>
+                <input type="email" placeholder="이메일 주소" />
+
+                <label>연락처</label>
+                <input type="text" placeholder="연락처" />
+
+                <label>비밀번호</label>
+                <input type="password" placeholder="비밀번호" />
+
+                <label>비밀번호 확인</label>
+                <input type="password" placeholder="비밀번호 확인" />
+
+                <label class="agree">
+                    <input type="checkbox" />
+                    이용약관 및 개인정보 처리방침에 동의합니다
+                </label>
+
+                <button type="submit" class="signup-btn">회원가입</button>
+            </form>
+
+            <!-- 사업자 회원가입 폼 (비활성화 안내용) -->
+            <form id="business-form" class="signup-form hidden">
+                <label>상호명</label>
+                <input type="text" placeholder="상호명" />
+
+                <label>사업자 등록 번호</label>
+                <input type="text" placeholder="사업자 등록 번호" />
+
+                <label>이메일</label>
+                <input type="email" placeholder="이메일 주소" />
+
+                <label>연락처</label>
+                <input type="text" placeholder="연락처" />
+
+                <label>주소</label>
+                <input type="text" placeholder="주소" />
+
+                <label>비밀번호</label>
+                <input type="password" placeholder="비밀번호" />
+
+                <label>비밀번호 확인</label>
+                <input type="password" placeholder="비밀번호 확인" />
+
+                <label class="agree">
+                    <input type="checkbox" />
+                    이용약관 및 개인정보 처리방침에 동의합니다
+                </label>
+
+                <button type="button" class="signup-btn disabled" disabled>회원가입 (준비 중)</button>
+            </form>
+
+            <p class="login-link">이미 계정이 있으신가요? <a href="login.html">로그인</a></p>
+        </div>
+    </div>
+
+    <script src="fooding_signup.js"></script>
+</body>
+
+</html>
