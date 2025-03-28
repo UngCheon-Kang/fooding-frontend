@@ -1,0 +1,76 @@
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .feature-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    border: 1px solid #eee;
+  }
+  
+  .feature-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-box h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 2rem;
+    color: #777;
+    font-size: 0.95rem;
+  }
+  
+  .feature-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .feature-btn.main {
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .feature-btn.main:hover {
+    background-color: #333;
+  }
+  
+  .feature-btn:not(.main):not(.outline) {
+    background-color: #f3f3f3;
+    color: #333;
+  }
+  
+  .feature-btn:not(.main):not(.outline):hover {
+    background-color: #e0e0e0;
+  }
+  
+  .feature-btn.outline {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #333;
+  }
+  
+  .feature-btn.outline:hover {
+    background-color: #fafafa;
+  }
+  

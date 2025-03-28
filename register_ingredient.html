@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>식재료 등록</title>
+  <link rel="stylesheet" href="register_ingredient.css" />
+</head>
+<body>
+  <div class="register-container">
+    <div class="register-box">
+      <h2>식재료 등록</h2>
+      <p class="subtitle">나눔하실 식재료 정보를 입력해주세요</p>
+
+      <!-- ✅ form에 action 추가 -->
+      <form id="ingredient-form" action="profile.html">
+        <label>식재료 이름</label>
+        <input type="text" placeholder="식재료 이름을 입력하세요" required />
+
+        <label>무게 (g)</label>
+        <input type="number" placeholder="무게를 입력하세요" required />
+
+        <label>유통기한</label>
+        <input type="date" required />
+
+        <label>코멘트</label>
+        <textarea placeholder="거래 가능 시간 등 추가 정보를 입력하세요"></textarea>
+
+        <button type="submit" class="submit-btn">등록하기</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -2,83 +2,54 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로그인</title>
-    <link rel="stylesheet" href="fooding_login.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인</title>
+  <link rel="stylesheet" href="fooding_login.css" />
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h2>로그인</h2>
-            <p class="subtitle">계정에 로그인하여 식재료 교환 및 나눔을 시작하세요</p>
+  <div class="login-container">
+    <div class="login-box">
+      <h2>로그인</h2>
+      <p class="subtitle">계정에 로그인하여 식재료 교환 및 나눔을 시작하세요</p>
 
-            <div class="tab">
-                <button class="tab-btn active" data-type="personal">개인</button>
-                <button class="tab-btn" data-type="business">사업자(요식업)</button>
-            </div>
+      <div class="tab">
+        <button class="tab-btn active" data-type="personal">개인</button>
+        <button class="tab-btn" data-type="business">사업자(요식업)</button>
+      </div>
 
-            <form>
-                <label for="email">이메일</label>
-                <input type="email" id="email" placeholder="이메일 주소" />
+      <!-- ✅ form에 action 추가 -->
+      <form action="feature_select.html">
+        <label for="email">이메일</label>
+        <input type="email" id="email" placeholder="이메일 주소" />
 
-                <div class="pw-row">
-                    <label for="password">비밀번호</label>
-                    <a href="#" class="find-password">비밀번호 찾기</a>
-                </div>
-                <input type="password" id="password" placeholder="비밀번호" />
-
-                <button type="submit" class="login-btn">로그인</button>
-            </form>
-
-            <p class="signup-link">계정이 없으신가요? <a href="fooding_signup.html">회원가입</a></p>
+        <div class="pw-row">
+          <label for="password">비밀번호</label>
+          <a href="#" class="find-password">비밀번호 찾기</a>
         </div>
-    </div>
-</body>
+        <input type="password" id="password" placeholder="비밀번호" />
 
-<script>
+        <button type="submit" class="login-btn">로그인</button>
+      </form>
+
+      <p class="signup-link">계정이 없으신가요? <a href="fooding_signup.html">회원가입</a></p>
+    </div>
+  </div>
+
+  <!-- 기존 탭 전환용 JS 유지 (선택사항) -->
+  <script>
     const tabButtons = document.querySelectorAll('.tab-btn');
 
     tabButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // 기존 active 제거
-            tabButtons.forEach(b => b.classList.remove('active'));
-            // 클릭된 버튼에 active 추가
-            btn.classList.add('active');
-
-            const type = btn.getAttribute('data-type');
-            console.log(`선택된 로그인 유형: ${type}`);
-            // 이 곳에 향후 역할별 폼 분리 로직 등을 추가 가능
-        });
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const type = btn.getAttribute('data-type');
+        console.log(`선택된 로그인 유형: ${type}`);
+      });
     });
-</script>
-
-<script>
-    document.getElementById("login-form").addEventListener("submit", async function (e) {
-        e.preventDefault();
-    
-        const loginData = {
-            username: document.getElementById("username").value,
-            password: document.getElementById("password").value
-        };
-    
-        const response = await fetch("http://localhost:8080/api/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(loginData)
-        });
-    
-        if (response.ok) {
-            alert("로그인 성공!");
-            window.location.href = "fooding.html";
-        } else {
-            alert("아이디 또는 비밀번호가 올바르지 않습니다.");
-        }
-    });
-    </script>
-    
+  </script>
+</body>
 
 </html>

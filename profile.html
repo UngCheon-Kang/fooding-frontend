@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>내 프로필</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-box">
+      <div class="profile-header">
+        <h2>내 프로필</h2>
+        <button class="back-btn" onclick="location.href='feature_select.html'">돌아가기</button>
+      </div>
+      <p class="subtitle">내 정보 및 등록한 식재료</p>
+
+      <div class="user-info">
+        <div class="profile-img"></div>
+        <div class="user-details">
+          <strong>홍길동</strong>
+          <p>📞 010-1234-5678</p>
+          <p>📍 서울 강남구</p>
+        </div>
+      </div>
+
+      <h3 class="section-title">등록된 식재료</h3>
+      <div class="ingredient-card">
+        <div class="top-row">
+          <strong>당근</strong>
+          <span class="weight">500g</span>
+        </div>
+        <p class="date">📅 유통기한: 2025-04-05</p>
+        <p class="comment">⏱ 주말에만 교환 가능합니다</p>
+      </div>
+
+      <button class="new-register-btn" onclick="location.href='register_ingredient.html'">
+        새 식재료 등록하기
+      </button>
+    </div>
+  </div>
+</body>
+</html>
