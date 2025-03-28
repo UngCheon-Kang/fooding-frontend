@@ -20,27 +20,28 @@ tabButtons.forEach((btn) => {
   });
 });
 
-// axios 회원가입 요청
+// 회원가입 제출 처리
 personalForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // 입력값 추출
   const name = personalForm.querySelector('input[placeholder="이름"]').value;
   const email = personalForm.querySelector('input[placeholder="이메일 주소"]').value;
-  const phone = personalForm.querySelector('input[placeholder="연락처"]').value;
+  const region = personalForm.querySelector('input[placeholder="지역을 입력하세요"]').value;
   const password = personalForm.querySelector('input[placeholder="비밀번호"]').value;
   const confirmPassword = personalForm.querySelector('input[placeholder="비밀번호 확인"]').value;
   const agreeChecked = personalForm.querySelector('input[type="checkbox"]').checked;
+  const pwErrorMsg = document.getElementById("pw-error");
 
-  // 유효성 검사
-  if (!name || !email || !phone || !password || !confirmPassword) {
+  if (!name || !email || !region || !password || !confirmPassword) {
     alert("모든 필드를 입력해주세요.");
     return;
   }
 
   if (password !== confirmPassword) {
-    alert("비밀번호가 일치하지 않습니다.");
+    pwErrorMsg.style.display = "block"; // ❗ 오류 메시지 표시
     return;
+  } else {
+    pwErrorMsg.style.display = "none"; // ✅ 오류 메시지 숨김
   }
 
   if (!agreeChecked) {
@@ -48,16 +49,13 @@ personalForm.addEventListener("submit", function (event) {
     return;
   }
 
-  // 임시 주소 (추후 지역 정보 받을 수 있게 확장 가능)
-  const address = "기본주소";
-
-  // axios 요청
+  // 서버 요청
   axios.post("http://localhost:8080/users/register", {
     name: name,
     password: password,
     email: email,
-    phone: phone,
-    address: address
+    region: region,
+    address: region
   })
     .then(function (response) {
       alert("회원가입 성공! " + response.data.name + "님 환영합니다!");
